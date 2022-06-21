@@ -44,7 +44,7 @@ def game(rps, ai_choice):
                 break
         except ValueError:
             t.sleep(4)
-            print('That is not a string (meaning a letter on word')
+            print('That is not a string (meaning a letter or word')
 
 def main():
     os.system('cls' if os.name=='nt' else 'clear')
