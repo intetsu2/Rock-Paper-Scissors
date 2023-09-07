@@ -2,4 +2,4 @@
 rock, paper, scissor game with the computer.
 
 ## Should look like this
-![game_example](ROCK-PAPER-SCISSORS/rps_example.png)
+![game_example](src/rps_example.png)

@@ -4,26 +4,22 @@ from unicodedata import name
 def game(rps, ai_choice):
     while True:
         try:
-            print('\n')
-            print(rps)
-            print('\v')
+            print(f"\n {rps} \v")
             t.sleep(3)
-            print('Rock, Paper, Scissos - Shoot!')
+            print('Rock, Paper, Scissor - Shoot!')
 
-            # the users choice
             player_choice = str(input('Choose [R, P, S]: ')).upper()
             print('\n')
             t.sleep(2)
             if not re.match("[RrPpSs]", player_choice):
-                print('That is not one of the choices')
-                print('Please enter letter R, P, or S')
+                print('Not in the choices, Please enter letter R, P, or S')
                 continue
             print(f'You chose {player_choice}')
             rand_rps = rd.choice(ai_choice)
             t.sleep(2)
             print(f'I chose {rand_rps}')
             
-            # decides on who wins
+            # who wins
             t.sleep(3)
             if rand_rps == player_choice:
                 print('Tie!')
@@ -35,7 +31,8 @@ def game(rps, ai_choice):
                 print('Paper beats rock, I win!')
             else:
                 print('You win!')
-            # continue playing?
+                
+            # keep playing?
             keep_playing = str(input('Keep playing? (Y or N): ')).upper()
             if keep_playing == 'Y':
                 continue
